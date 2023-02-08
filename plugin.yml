@@ -1,0 +1,17 @@
+---
+name: PrivateMine
+version: 1.0.0
+main: PVM
+api: 4.12.8
+author: AmitxD
+website: https://github.com/Amitminer888/Private-Mine
+commands:
+ feedback:
+  description: private mines
+  usage: "/pvm <UI>"
+  permission: privatemine.command.pvm
+permissions:
+  privatemine.command.pvm:
+    description: "Allows the user to run the pvm command"
+    default: true
+...
