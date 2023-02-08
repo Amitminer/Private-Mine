@@ -6,7 +6,7 @@ api: 4.12.8
 author: AmitxD
 website: https://github.com/Amitminer888/Private-Mine
 commands:
- feedback:
+ pvm:
   description: private mines
   usage: "/pvm <UI>"
   permission: privatemine.command.pvm
