@@ -10,12 +10,13 @@ use pocketmine\event\Listener;
 use pocketmine\command\Command;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
+# LibEco by Davidglitch04
+use davidglitch04\libEco\libEco;
 # FormsUI (lib) by Vecnavium
 use Vecnavium\FormsUI;
 use Vecnavium\FormsUI\Form;
 use Vecnavium\FormsUI\CustomForm;
 use Vecnavium\FormsUI\SimpleForm;
-use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener {
     # onLoading plugin
@@ -36,7 +37,7 @@ class Main extends PluginBase implements Listener {
         }
         return true;
     }
-    # UI
+    # PVM UI function 
   public function pvmUI(Player $player){
         $form = new SimpleForm(function(Player $player, int $data = null){
             if($data === null){
@@ -44,14 +45,27 @@ class Main extends PluginBase implements Listener {
             }
             switch($data){
                 case 0:
-                    $this->getServer()->dispatchCommand($player, "say coalMine");
+                    $this->coalmine($player);
                 break;
             }
         });
+        
         # Mines List
         $form->setTitle("§l§cPrivate Mines");
         $form->addButton("Coal Mine", 0, "textures/items/coal");
         $player->sendForm($form);
         return $form;
     }
+    # coal mine function
+  public function coalmine(Player $player){
+      $amount = 1000;
+      libEco::reduceMoney($player, $amount, static function(bool $success) use($player): void {
+	if($success){
+	    $player->sendMessage("§aYou have successfully bought Coalmine! Thanks");
+	} else{
+		$player->sendMessage("§cIt looks like the money in your account aren't sufficient to make this purchase at this time.");
+	}
+}); # closing function 
+
+  }
 }
