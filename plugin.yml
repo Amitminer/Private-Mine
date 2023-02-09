@@ -1,7 +1,7 @@
 ---
 name: PrivateMine
 version: 1.0.0
-main: PVM
+main: PrivateMine\PVM
 api: 4.12.8
 author: AmitxD
 website: https://github.com/Amitminer888/Private-Mine
