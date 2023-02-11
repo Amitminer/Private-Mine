@@ -5,18 +5,20 @@ declare(strict_types=1);
 namespace PrivateMine;
 
 use pocketmine\Server;
+use pocketmine\utils\Config;
 use pocketmine\player\Player;
 use pocketmine\event\Listener;
 use pocketmine\command\Command;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
+use pocketmine\network\mcpe\protocol\ToastRequestPacket;
 # LibEco by Davidglitch04
 use davidglitch04\libEco\libEco;
 # FormsUI (lib) by Vecnavium
 use Vecnavium\FormsUI;
 use Vecnavium\FormsUI\Form;
-use Vecnavium\FormsUI\CustomForm;
 use Vecnavium\FormsUI\SimpleForm;
+use Vecnavium\FormsUI\ModalForm;
 
 class Main extends PluginBase implements Listener {
     # onLoading plugin
