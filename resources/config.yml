@@ -5,5 +5,7 @@
 
 title: "§c-----OmniCraft Server-----"
 # Your Server Name.
+confirmation-msg: " "
+#TODO
 config-ver: 1.0
 ---
