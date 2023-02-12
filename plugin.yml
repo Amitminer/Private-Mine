@@ -4,6 +4,7 @@ version: 1.0.0
 main: PrivateMine\PVM
 api: 4.12.8
 author: AmitxD
+sotfdepend: [WorldWhitelist]
 website: https://github.com/Amitminer888/Private-Mine
 commands:
  pvm:
