@@ -97,12 +97,12 @@ Details: §cfor more Details. please visit discord server and check channel/pvm-
     # coal mine function
   public function coalmine(Player $player){
       $amount = 1000;
-      $title = $this->config->get("title");
-      libEco::reduceMoney($player, $amount, static function(bool $success) use($player, $title): void {
+      $config = $this->config;
+      libEco::reduceMoney($player, $amount, static function(bool $success) use($player, $config): void {
 	if($success){
-        $player->sendToastNotification($title , "§aYou have successfully bought DiamondBlock Mine! Thanks");
+        $player->sendToastNotification($config->get("title") , config->get("success-msg");
 	} else{
-		$player->sendMessage("§cIt looks like the money in your account aren't sufficient to make this purchase at this time.");
+		$player->sendMessage($config->get("money-insufficient"));
 	}
 });
 
