@@ -22,6 +22,7 @@ use Vecnavium\FormsUI\ModalForm;
 
 class Main extends PluginBase implements Listener {
     # onLoading plugin
+    public $config;
     public function onEnable() : void{
         $this->getLogger()->info("Private mine enabled!!");
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
