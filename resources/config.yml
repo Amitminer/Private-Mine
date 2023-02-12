@@ -3,9 +3,11 @@
  # https://github.com/Amitminer888/Private-Mine 
  #★configuration...
 
+
+#★messages config---
 title: "§c-----OmniCraft Server-----"
-# Your Server Name.
-confirmation-msg: " "
-#TODO
+# Your Server Name 
+success-msg: "§aYou have successfully bought DiamondBlock Mine! Thanks"
+money-insufficient: "§cIt looks like the money in your account aren't sufficient to make this purchase at this time."
 config-ver: 1.0
 ---
