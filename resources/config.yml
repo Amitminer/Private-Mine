@@ -3,11 +3,53 @@
  # https://github.com/Amitminer888/Private-Mine 
  #★configuration...
 
-
+# mines limts: 5 only._.
+PrivateMinesSettings:
+  Mine1:
+    name: "DiamondBlockMine"
+    World: "test"
+    Price: 99999
+    confirm-msg:
+    permission: privatemine.mine1.access
+  Mine2:
+    name: "EmeraldBlockMine"
+    World: "emMine"
+    Price: 99999
+    confirm-msg:
+    permission: privatemine.mine2.access
+  Mine3:
+    name: "IronBlockMine"
+    World: "ironMine"
+    Price: 99999
+    type: 
+    confirm-msg:
+    permission: privatemine.mine3.access
+  Mine4:
+    name: "GoldBlockMine"
+    World: "goldMine"
+    Price: 99999
+    confirm-msg:
+    permission: privatemine.mine4.access
+    
 #★messages config---
+    
 title: "§c-----OmniCraft Server-----"
 # Your Server Name 
-success-msg: "§aYou have successfully bought DiamondBlock Mine! Thanks"
+success-msg: "§aYou have successfully bought {name} Thanks"
 money-insufficient: "§cIt looks like the money in your account aren't sufficient to make this purchase at this time."
+# ignore it._.
+confirm-msg: "§l§9----- CONFIRM PURCHASE -----
+§aItem: §bDiamond Block Mine
+§cPrice: §e50Million 
+§cDetails: §cfor more Details. please visit discord server and check channel/pvm-preview..
+§aBenefits: §2Unlimited access to diamondblock mine and increased mining capabilities
+
+§aReference Number: §c#{ReferenceNumber}
+
+§cBy confirming this purchase, you agree to our terms of service and refund policy.
+
+§aConfirm Purchase (Yes, I want to proceed with this purchase)
+§cCancel (No, I want to go back to the previous menu)"
+
 config-ver: 1.0
 ---
