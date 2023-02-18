@@ -38,18 +38,17 @@ title: "§c-----OmniCraft Server-----"
 success-msg: "§aYou have successfully bought {name} Thanks"
 money-insufficient: "§cIt looks like the money in your account aren't sufficient to make this purchase at this time."
 # ignore it._.
-confirm-msg: "§l§9----- CONFIRM PURCHASE -----
-§aItem: §bDiamond Block Mine
-§cPrice: §e50Million 
-§cDetails: §cfor more Details. please visit discord server and check channel/pvm-preview..
-§aBenefits: §2Unlimited access to diamondblock mine and increased mining capabilities
+confirm-msg: "§l§9----- CONFIRM PURCHASE -----\n
+§aItem: §bDiamond Block Mine.\n         
+§cPrice: §e50Million\n                 
+§cDetails: §cfor more Details. please visit discord server and check channel/pvm-preview...\n
+§aBenefits: §2Unlimited access to diamondblock mine and increased mining capabilities.\n
 
-§aReference Number: §c#{ReferenceNumber}
+§aReference Number: §c#{ReferenceNumber}\n   
 
-§cBy confirming this purchase, you agree to our terms of service and refund policy.
-
-§aConfirm Purchase (Yes, I want to proceed with this purchase)
-§cCancel (No, I want to go back to the previous menu)"
+§cBy confirming this purchase, you agree to our terms of service and refund policy.\n
+§aConfirm Purchase (Yes, I want to proceed with this purchase).\n        
+§cCancel (No, I want to go back to the previous menu)."
 
 config-ver: 1.0
 ---
