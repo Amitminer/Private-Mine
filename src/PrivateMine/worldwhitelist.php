@@ -16,16 +16,24 @@ use pocketmine\plugin\PluginBase;
 class worldwhitelist{
      
     private Server $server;
+    private $config;
+    private $plugin;
     
-	public static function executeWWL(Player $player){
+    public function __construct(Config $config) {
+        $this->config = $config;
+    }
+    
+	public function executeWWL(Player $player){
 	    
 	    $server = Server::getInstance();
-        $worldName = "test";
         $playerName = $player->getName();
+        $Mine1 = $this->config->getNested("PrivateMinesSettings.Mine1.World");
+        $pm1 = $this->config->getNested("PrivateMinesSettings.Mine1.permission");
         # executing console Command 
-	    $server->dispatchCommand(new ConsoleCommandSender($server, $server->getLanguage()), "ww add {$worldName} {$playerName}");
-	    $server->getWorldManager()->loadWorld($worldName);
-	    $world = $server->getWorldManager()->getWorldByName($worldName);
+	    $server->dispatchCommand(new ConsoleCommandSender($server, $server->getLanguage()), "ranks setpermission {$playerName} {$pm1}");
+	    $server->dispatchCommand(new ConsoleCommandSender($server, $server->getLanguage()), "ww add {$Mine1} {$playerName}");
+	    $server->getWorldManager()->loadWorld($Mine1);
+	    $world = $server->getWorldManager()->getWorldByName($Mine1);
 	    $player->teleport($world->getSafeSpawn());
 	}
 }
