@@ -1,10 +1,10 @@
 ---
 name: PrivateMine
-version: 1.0.0
+version: 2.0.0
 main: PrivateMine\PVM
 api: 4.12.8
 author: AmitxD
-sotfdepend: [WorldWhitelist]
+depend: [WorldWhitelist, RankSystem]
 website: https://github.com/Amitminer888/Private-Mine
 commands:
  pvm:
@@ -14,5 +14,8 @@ commands:
 permissions:
   privatemine.command.pvm:
     description: "Allows the user to run the pvm command"
-    default: true
+    default: true 
+  privatemine.mine1.access:
+    description: "Allow the user to run the pvm mine1 cmd"
+    default: false
 ...
